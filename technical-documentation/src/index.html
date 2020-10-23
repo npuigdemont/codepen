@@ -1,0 +1,75 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<nav id="navbar">
+  <header id="Afegir_React_a_web_existent">Afegir React a web existent</header>
+  <ul>
+    <li><a class="nav-link" href=#Introducció>Introducció</a></li>
+    <li><a class="nav-link" href="#Conceptes_Javascript_necessaris">Conceptes Javascript necessaris</a></li>
+    <li><a class="nav-link" href="#Afegir_react_al_web">Afegir react al web</a></li>
+      <li><a class="nav-link" href="#Afegir_contenidor_DOM">Afegir contenidor DOM</a></li>
+   <li><a class="nav-link" href="#Afegir_etiquetes_script">Afegir etiquetes script</a></li>
+    <li><a class="nav-link" href="#Crea_component_React">Crea component React</a></li>
+    </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introducció">
+      <header>Introducció</header>
+      <article><p>React va ser dissenyat des del principi perquè es pogués adoptar de forma gradual, i poder fer servir només algunes coses de React. Pots afegir una miqueta d’interactivitat a una pàgina ja existent. Els components de React son una  manera de fer això.</p>
+<p>La majoria de llocs web no son, i no necessiten ser, aplicacions d’una sola pàgina. Amb unes poques línies de codi i sense eines de recopilació, pots provar React en llocs petits del teu c web. I des d'aquí pots expandir la teva presència de forma gradual, o mantenir algun widget dinàmic.</p></artile></section>
+      <section class="main-section" id="Conceptes_Javascript_necessaris"> 
+        <header>Conceptes Javascript necessaris</header>
+        <article><p>Necessito realment utilitzar un framework com React per desenvolupar aquesta aplicació?</p>
+<p>La resposta a aquesta pregunta dependrà de l'aplicació, de quant temps tens per desenvolupar-la, de com i per qui haurà de ser mantinguda després i probablement de molts altres factors conjunturals.
+Però el més important és que no sabràs respondre-correctament si no coneixes bé el llenguatge, en aquest cas javascript.
+          </p>
+<p>Així que la meva proposta és, aprèn javascript fins que tu mateix siguis capaç de respondre a la meva pregunta, perquè sàpigues el que implica desenvolupar tota l'aplicació sense frameworks, i al llegir sobre el que fa React (per exemple) et sembli que és convenient utilitzar-lo, tenint en compte totes les implicacions que té per al projecte.
+<br>
+És veritat cada framework té les seves peculiaritats pròpies, però hi ha alguns desavantatges comuns a tots.
+<ul>
+<li>La majoria lliguen l'arquitectura de el projecte al framework. Si has de mantenir-lo, actualitzar-lo, modificar-lo o reaprofitar-ne parts en altres projectes, hauràs de fer-ho fent servir el framework, perquè fer-ho sense significarà gairebé amb total certesa reescriure bona part de el codi...</li>
+
+<li>Si més gent col·labora en el projecte, tots hauran de dedicar temps a aprendre el framework (si no el coneixien abans)</li></ul>
+
+<p>No és que em sembli malament aprendre'n ni fer-los servir, però les llibreries i frameworks van i vénen, es posen de moda o cauen en l'oblit, el llenguatge dura molt més.
+<br>
+Alguns llenguatges també cauen en desús amb el temps, però aprendre un llenguatge en profunditat implica aprendre a programar cada vegada millor en el procés, mentre que aprendre frameworks abans d'aprendre bé el llenguatge t'ensenya a prendre dreceres, i el que és pitjor moltes vegades sense saber de què estàs fent una drecera.
+<br>
+Per cert, quan coneixes bé un llenguatge, aprendre a utilitzar un framework basat en ell no porta massa temps.
+          </p>
+        </article>
+    </section>
+      <section class="main-section" id="Afegir_react_al_web"> 
+        <header>Afegir react al web</header>
+          <article><p>Ara aprendrem com afegir un component de React a una pàgina HTML que ja existeix. Es poden seguir els passos a la teva web o bé crear un nou arxiu HTML per poder practicar.</p>
+ <p>No hi ha cap necessitat de fer servir cap requeriment per fer la instal·lació només: <ul> <li>Connexió a internet</li> <li>una estona per aprendre com funciona</li></p></article></section>
+      <section class="main-section" id="Afegir_contenidor_DOM"> 
+        <header>Afegir contenidor DOM</header>
+          <article><p>Per començar, obre la pàgina HTML que vulguis editar. Afegeix una etiqueta <code>< div></code> buida per marcar el lloc on vols veure alguna cosa amb React. Per exemple: <pre><code> < !-- ... HTML existent ... -->
+< div id="like_button_container"></div>
+            < !-- ... HTML existent ... --></code></pre> a aquest <code>< div></code> li afegim un atribut HTML <code>id</code> que és unic. Això ens premetrà trobar-lo des del codi Javascript més endavant i visualitzar un component de React dins d'aquest.</p>
+            <p><strong>Consell: </strong>Pots afegir un "contenidor" <code>< div></code> com aquest en qualsevol lloc dins l'etiqueta <code>< body></code>. Pots tenir la quantitat de contenidors independents en el DOM que vulguis. Normalment estan buits ja que React reemplaça el contingut existent dins els contenidors del DOM.</p></section>
+            
+        <section class="main-section" id="Afegir_etiquetes_script"> 
+        <header>Afegir etiquetes script</header>
+          <article><p>El pas següent és afegir tres etiquetes <code>< script ></code> a la pàgina HTML just abans de tancar l'etiqueta <code>< /body></code>:<br>
+<code> < !-- ... més HTML ... --><br>
+
+  < !-- Carregar React. --><br>
+  < !-- Nota: quan es desplegui, reemplaçar "development.js" amb "production.min.js". --><br>
+  < script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script><br>
+  < script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  < !-- Carreguem el nostre component de React. -->
+  < script src="like_button.js"></script>
+<br>
+< /body></code><br>Les primeres dues etiquetes carreguen React. La tercera carrega el teu codi del component.</p></section>
+<section class="main-section" id="Crea_component_React"> 
+        <header>Crea component React</header>
+          <article><p>Crea un arxiu que es digui <code>like_button.js</code> al mateix lloc on tens l'arxiu HTML.
+          <ul>
+          <li>Obre <a href:"https://gist.githubusercontent.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js">aquest codi inicial</a> i enganxa'l a l'arxiu que acabes de crear.</li>
+          <li>Després al <a href:"https://gist.githubusercontent.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js">codi inicial</a> afegeix les següents dues línies al final de <code>like_button.js</code>:
+          <code>const domContainer = document.querySelector('#like_button_container');
+ReactDOM.render(e(LikeButton), domContainer);</code></li></ul>
+Aquestes dues línies de codi troben el <code>< div></code> que afegim al nostre HTML al primer pas i mostren el component de React per el nostre botó "Like" a dins.</p></section></article>
+
+          
